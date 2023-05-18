@@ -75,5 +75,5 @@ age_df.plot(kind='bar', stacked=True)
 plt.xlabel('Age Group')
 plt.ylabel('Number of passengers')
 plt.title('Distribution of passengers by age and survival')
-st.pyplot()
+st.pyplot() #javis guapos
 
