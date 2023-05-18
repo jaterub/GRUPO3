@@ -63,5 +63,3 @@ accuracy = accuracy_score(y_val, y_pred)
 importances = pd.DataFrame({'feature':X_train.columns,'importance':np.round(model.feature_importances_,3)})
 importances = importances.sort_values('importance',ascending=False).set_index('feature')
 
-
-
