@@ -38,3 +38,11 @@ test_df = pd.concat([test_df, pd.get_dummies(test_df['Embarked'], prefix='Embark
 axis=1)
 test_df['Fare'].fillna(test_df['Fare'].dropna().mean(), inplace=True)
 
+'''
+Generamos Variables dependientes e independientes
+'''
+variables=['Pclass', 'Age', 'Sex', 'SibSp', 'Parch', 'Fare', 'CabinBool', 'Embarked_C', 
+'Embarked_S', 'Embarked_Q']
+X = train_df[variables]
+y = train_df['Survived']
+
