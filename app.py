@@ -14,6 +14,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 train_df = pd.read_csv('data/train.csv')
 test_df = pd.read_csv('data/test.csv')
 
+
 train_df['Sex'] = train_df['Sex'].map({'male': 0, 'female': 1})
 test_df['Sex'] = test_df['Sex'].map({'male': 0, 'female': 1})
 train_df['Sex'].fillna(train_df['Age'].mean(), inplace=True)
@@ -36,3 +37,4 @@ prefix='Embarked')], axis=1)
 test_df = pd.concat([test_df, pd.get_dummies(test_df['Embarked'], prefix='Embarked')], 
 axis=1)
 test_df['Fare'].fillna(test_df['Fare'].dropna().mean(), inplace=True)
+
